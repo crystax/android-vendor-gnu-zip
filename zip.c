@@ -11,16 +11,16 @@ static char rcsid[] = "$Id: zip.c,v 0.17 1993/06/10 13:29:25 jloup Exp $";
 #include <ctype.h>
 #include <sys/types.h>
 
-#include "tailor.h"
-#include "gzip.h"
-#include "crypt.h"
-
 #ifdef HAVE_UNISTD_H
 #  include <unistd.h>
 #endif
 #ifndef NO_FCNTL_H
 #  include <fcntl.h>
 #endif
+
+#include "tailor.h"
+#include "gzip.h"
+#include "crypt.h"
 
 local ulg crc;       /* crc on uncompressed file data */
 long header_bytes;   /* number of bytes in gzip header */
