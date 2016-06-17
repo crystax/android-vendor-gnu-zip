@@ -47,7 +47,7 @@ else
     if test ! -s _match.s || grep error < _match.s > /dev/null; then
       :
     elif eval "$CC -c _match.s >/dev/null 2>&1" && test -f _match.o; then
-      DEFS="${DEFS} -DASMV"
+      echo "#define ASMV 1" >>confdefs.h
       OBJA=match.o
     fi
   fi
